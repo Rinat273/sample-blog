@@ -16,8 +16,18 @@ describe Article do
       article = create(:article, title: 'Lorem Ipsum')
 
       # assert, проверка
-      expect(artticle.subject).to eq 'Lorem Ipsum'
+      expect(article.subject).to eq 'Lorem Ipsum'
 
     end  
+  end
+
+  describe "#last_comment" do
+    it "returns the last comment" do
+      # создаём статью, но в этот раз с 3 комментариями
+      article = create(:article_with_comments)
+
+      # проверка
+      expect(article.last_comment.body).to eq "Comment body 3"
+    end
   end
 end
