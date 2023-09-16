@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
-  validates :title, presence: true
-  validates :text, presence: true
+  validates :title, length: { maximum: 140 }, presence: true
+  validates :text, length: { maximum: 4000 }, presence: true
   has_many :comments
 
   def subject
@@ -10,5 +10,5 @@ class Article < ApplicationRecord
   def last_comment
     comments.last
   end
-  
+
 end
