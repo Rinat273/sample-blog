@@ -3,7 +3,7 @@
 	<%= @article.text %>
 </p>
 
-<h2>Comments</h2>
+<h2><%= t("articles.comments") %></h2>
 
 <% @article.comments.each do |comment| %>
 	<p>
@@ -12,7 +12,7 @@
 	</p>
 <% end %>
 
-<h2>Add comment:</h2>
+<h2><%= t("articles.add_comment") %></h2>
 <p>
 <%= form_for([@article, @article.comments.build]) do |f| %>
 	<p>

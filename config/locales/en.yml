@@ -39,5 +39,7 @@ en:
   articles:
     new_article: "New article"
     edit_article: "Edit article"
+    comments: "Comments"
+    add_comment: "Add comment:"
 
 
